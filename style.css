@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --white: #fff;
+}
+
+body {
+  color: var(--very-dark-blue);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 17px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex > div,
+.flex > ul {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 20px;
+}
+
+.flex > div:last-child {
+  margin-left: 20px;
+}
+
+h1,
+h2,
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.learn-more {
+  border-bottom: 1px solid var(--moderate-cyan);
+  color: var(--moderate-cyan);
+  padding: 5px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Nav Styles */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.logo {
+  width: 150px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 50px;
+}
+
+nav ul a {
+  color: var(--very-dark-blue);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+
+/* Form Styles */
+
+form {
+  display: flex;
+}
+
+input,
+button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+input {
+  border: 2px solid var(--light-gray);
+  border-radius: 2px;
+  flex: 70%;
+  outline: none;
+  padding: 15px;
+}
+
+input::placeholder {
+  color: var(--light-gray);
+}
+
+button {
+  background-color: var(--bright-blue);
+  border: 2px solid var(--bright-blue);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  flex: 30%;
+  margin-left: 10px;
+  padding: 15px;
+}
+
+/* Special Section Styles */
+
+.special {
+  background-color: var(--light-grayish-blue);
+  margin-top: 100px;
+  padding: 50px 0;
+  position: relative;
+}
+
+.special::before {
+  content: "";
+  background-image: url("images/bg-curve-desktop.svg");
+  position: absolute;
+  top: -70px;
+  left: 0;
+  height: 70px;
+  width: 100%;
+}
+
+.testimonial-box {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.testimonial-box p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.user-info img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Early Access Styles */
+
+.early-access {
+  background-color: var(--desaturated-blue);
+  color: var(--white);
+  padding: 50px 0;
+}
+
+.early-access form {
+  flex-direction: column;
+}
+
+.early-access form input {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.early-access form button {
+  margin: 20px 0 0;
+  width: 40%;
+}
+/* Footer Styles */
+
+footer {
+  background-color: var(--very-dark-blue);
+  color: #fff;
+  padding: 50px 0 0;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .circle {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: right;
+}
+footer .flex img {
+  margin-right: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  nav .flex {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin-left: 30px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex > div {
+    width: 100%;
+  }
+
+  .flex > div:first-child {
+    margin-right: 0;
+  }
+
+  .flex > div:last-child {
+    margin-left: 0;
+  }
+
+  .img-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .margin-top {
+    margin-top: 30px;
+  }
+
+  .illustration {
+    margin-top: 30px;
+  }
+
+  .special::before {
+    background-image: url("images/bg-curve-mobile.svg");
+    top: -50px;
+    height: 50px;
+  }
+
+  .testimonial-box {
+    width: 100%;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  .early-access form button {
+    width: 100%;
+  }
+
+  footer ul {
+    padding: 0;
+    width: 100%;
+  }
+}
